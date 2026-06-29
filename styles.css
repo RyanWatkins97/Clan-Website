@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.row {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.row__narrow {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 96px 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+section {
+    padding: 0 32px;
+}
+
+main {
+    margin-bottom: 96px;
+}
+
+nav {
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    transition: opacity 300ms ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* LANDING */
+
+#landing {
+    background: linear-gradient(180deg, black, #36454F, black);
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.nav__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.link__name {
+    color: white;
+    display: flex;
+    margin: 60px 40px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    color: #D71C1C;
+}
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #8E1111;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+.link__hover-effect:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+/* ABOUT */
+
+#about {
+    background: linear-gradient(180deg, black, #36454F, black);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.divider {
+  width: 100%;
+  height: 5px;
+  margin-top: -40px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #36454F;
+  display: block;
+}
+
+.about__header {
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    margin: 20px auto;
+    color: #8E1111;
+}
+
+.about__header--small {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin: 25px auto;
+    color: #f0f0f0
+}
+
+.about__para {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 100px;
+    color: white;
+}
+
+.osok__img {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.divider--bottom {
+  width: 100%;
+  height: 5px;
+  margin-top: 80px;
+  margin-bottom: -40px;
+  border-bottom: 2px solid #36454F;
+  display: block;
+}
+
+/* MEMBERS */
+
+.members__container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: none;
+    margin: 0 auto;
+}
+
+.members__container::-webkit-scrollbar {
+    display: none;
+}
+
+.members__details {
+    width: calc(100% / 3);
+    height: auto;
+    margin: 25px 60px;
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.scroll__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev__btn { left: -150px; }
+.next__btn { right: -150px; }
+
+.member__img {
+    width: 200px;
+    height: auto;
+    margin: 5px 60px;
+}
+
+.member__para {
+    color: #f2f2f2;
+    margin: 15px 60px;
+}
+
+.carousel__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* GAMES */
+
+.divider__split {
+    width: 100%;
+    height: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #36454F;
+    display: block;
+}
+
+.carousel__games--wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.games__container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: none;
+    margin: 0 auto;
+}
+
+.games__container::-webkit-scrollbar {
+    display: none;
+}
+
+.game {
+    width: calc(100% / 3);
+    height: auto;
+    margin: 25px 10px;
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.game__img {
+    width: 200px;
+    height: 280px;
+    margin: 5px 10px;
+}
+
+.game__details {
+    color: #f2f2f2;
+    margin: 15px 60px;
+}
+
+/* VIDEOS */
+
+.videos__carousel--wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.videos__container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: none;
+    margin: 0 auto;
+}
+
+.video {
+    height: auto;
+    margin: 25px 20px;
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+.footer__container {
+    background: linear-gradient(180deg, black, #36454F, black);
+    height: 260px;
+    width: 100%;
+}
+
+.copy {
+    color: #F2F2F2;
+    text-align: center;
+}
+
+.links__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.link__bottom {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 20px;
+    color: #F2F2F2;
+    text-decoration: none;
+}
+
+li.link__name--bottom {
+    list-style-type: none;
+}
+
+.logo__bottom {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.footer__anchor {
+    position: relative;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #f2f2f2;
+    cursor: default;
+}
+
+.footer__anchor:hover .footer__logo--popper {
+    transform: translateX(-600px);
+    opacity: 1;
+}
+
+.footer__logo--popper {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+
